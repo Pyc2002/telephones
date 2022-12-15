@@ -1,9 +1,13 @@
 from constants import DATA_BASE
 import csv
-
+from functions import get_lines
 
 def show():
-    with open(DATA_BASE, "r", newline='', encoding='windows-1251') as csvfile:
-        reader = csv.DictReader(csvfile, delimiter="|")
-        for row in reader:
-            print(row)
+    """
+    Показывает базу данных.
+
+    :return:
+    """
+    reader = get_lines()
+    for row in reader:
+        print(*row.values())
