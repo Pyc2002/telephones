@@ -7,4 +7,4 @@ ABILITIES = [
     "Выход"
 ]
 
-DATA_BASE = 'DB.csv'
+DATA_BASE = 'DB'

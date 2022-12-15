@@ -6,5 +6,4 @@ ABILITIES = [
     "Показать справочник",
     "Выход"
 ]
-
-DATA_BASE = 'DB.csv'
+DATA_BASE = 
