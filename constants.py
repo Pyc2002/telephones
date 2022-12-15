@@ -7,7 +7,7 @@ ABILITIES = [
     "Выход"
 ]
 
-DATA_BASE = 'DB.json'
+DATA_BASE = 'DB.csv'
 
 CONTACT_TEMPLATE = {
     "Имя" : "",
