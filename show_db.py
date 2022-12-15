@@ -1,5 +1,3 @@
-from constants import DATA_BASE
-import csv
 from functions import get_lines
 
 def show():
