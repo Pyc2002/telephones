@@ -12,9 +12,9 @@ def get_menu_item() -> int:
     """
     for i, item in list(enumerate(ABILITIES, start=1)):
         print(i, item, end='\n')
-    choice = give_int(choose_option, 1, 6)
+    choice = give_int(choose_option, 1)
     return choice
 
 
-if __name__ == '__main__':
-    choice = get_menu_item()
+
+get_menu_item()

@@ -17,4 +17,4 @@ def get_menu_item() -> int:
 
 
 if __name__ == '__main__':
-    choice = get_menu_item()
+choice = get_menu_item()
