@@ -22,6 +22,7 @@ def write_lines(file_name: str, data):
     Записывает данные в csv файл, разбивая список по колонкам
     :param file_name: имя выходного файла
     :param data: входящий список данных
+
     :return:
     """
     with open(file_name, 'w', newline='') as csvfile:
