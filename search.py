@@ -2,12 +2,27 @@ from constants import DATA_BASE, CONTACT_TEMPLATE
 import csv
 from functions import give_int, get_lines
 
-def get_lines():    # надо перенести в functions эту функцию
+def get_lines():  # надо перенести в functions эту функцию
+    """
+    Считывает строки из базы данных и возвращает список,
+    каждый элемент которого соответствует контакту
+
+    :return:
+    """
     with open(DATA_BASE, "r", newline='', encoding='windows-1251') as csvfile:
-        result = csv.DictReader(csvfile, delimiter="|")
-    return result
+        result = csv.DictReader(csvfile, dialect='excel', delimiter=";")
+        data = []
+        for row in result:
+            data.append(list(row.values()))
+    return data
 
 def search_by():
+    """
+    Ищет контакт, спрашивая поле, по которому искать и искомое значение.
+    Возвращает все контакты, с совпашими значениями и предлагает выбрать один
+
+    :return: список с контакнтыми данными для одного контакта
+    """
     print(*CONTACT_TEMPLATE.keys())
     print(f"\nВыберите один из артибутов по номеру, от 1 до {len(CONTACT_TEMPLATE)}:")
     num = give_int(">> ", min_num=1, max_num=len(CONTACT_TEMPLATE))
