@@ -48,18 +48,3 @@ def get_lines():
         for row in result:
             data.append(list(row.values()))
     return data
-
-
-
-def write_lines(file_name: str, data): # тоже перенести в functions
-    """
-    Записывает данные в csv файл, разбивая список по колонкам
-    :param file_name: имя выходного файла
-    :param data: входящий список данных
-
-    :return:
-    """
-    with open(file_name, 'w', newline='') as csvfile:
-        writer = csv.writer(csvfile, dialect='excel', delimiter=';')
-        for i in data:
-            writer.writerow(i)

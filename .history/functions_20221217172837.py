@@ -35,7 +35,7 @@ def get_list_data(filename: str) -> List[str]:
     with open(filename, encoding='utf-8') as file:
         return file.read().split('\n')
 
-def get_lines():  
+def get_lines():  # надо перенести в functions эту функцию
     """
     Считывает строки из базы данных и возвращает список,
     каждый элемент которого соответствует контакту
@@ -48,18 +48,3 @@ def get_lines():
         for row in result:
             data.append(list(row.values()))
     return data
-
-
-
-def write_lines(file_name: str, data): # тоже перенести в functions
-    """
-    Записывает данные в csv файл, разбивая список по колонкам
-    :param file_name: имя выходного файла
-    :param data: входящий список данных
-
-    :return:
-    """
-    with open(file_name, 'w', newline='') as csvfile:
-        writer = csv.writer(csvfile, dialect='excel', delimiter=';')
-        for i in data:
-            writer.writerow(i)
