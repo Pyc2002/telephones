@@ -8,6 +8,11 @@ def get_lines():    # надо перенести в functions эту функц
     return result
 
 def search_by():
+    """
+    Ищет контакт, спрашивая поле, по которому искать и искомое значение.
+    Возвращает все контакты, с совпашими значениями и предлагает выбрать один
+    :return: список с контакнтыми данными для одного контакта
+    """
     print(*CONTACT_TEMPLATE.keys())
     print(f"\nВыберите один из артибутов по номеру, от 1 до {len(CONTACT_TEMPLATE)}:")
     num = give_int(">> ", min_num=1, max_num=len(CONTACT_TEMPLATE))
