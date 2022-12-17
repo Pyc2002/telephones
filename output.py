@@ -1,4 +1,5 @@
 from constants import DATA_BASE, CONTACT_TEMPLATE
+from functions import get_lines, write_lines
 import csv
 
 
@@ -17,7 +18,7 @@ def get_lines():  # надо перенести в functions эту функци
     return data
 
 
-def write_lines(file_name: str, data):
+def write_lines(file_name: str, data): # тоже перенести в functions
     """
     Записывает данные в csv файл, разбивая список по колонкам
     :param file_name: имя выходного файла
