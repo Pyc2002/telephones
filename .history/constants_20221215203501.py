@@ -1,1 +1,0 @@
-ABILITIES = [add_]
