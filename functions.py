@@ -3,6 +3,7 @@ from typing import List
 from constants import DATA_BASE
 import csv
 
+
 def give_int(input_string: str, min_num: Optional[int] = None, max_num: Optional[int] = None) -> int:
     '''
     Takes an int number from user
@@ -23,7 +24,6 @@ def give_int(input_string: str, min_num: Optional[int] = None, max_num: Optional
             print('Вы ввели не число')
 
 
-
 def get_list_data(filename: str) -> List[str]:
     '''
     Возвращает список из строк файла
@@ -35,7 +35,8 @@ def get_list_data(filename: str) -> List[str]:
     with open(filename, encoding='utf-8') as file:
         return file.read().split('\n')
 
-def get_lines():  
+
+def get_lines():
     """
     Считывает строки из базы данных и возвращает список,
     каждый элемент которого соответствует контакту
@@ -50,8 +51,7 @@ def get_lines():
     return data
 
 
-
-def write_lines(file_name: str, data): # тоже перенести в functions
+def write_lines(file_name: str, data):
     """
     Записывает данные в csv файл, разбивая список по колонкам
     :param file_name: имя выходного файла

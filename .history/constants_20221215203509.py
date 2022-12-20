@@ -1,1 +1,0 @@
-ABILITIES = [До]

@@ -1,1 +1,0 @@
-from user_interface import get_menu_item
