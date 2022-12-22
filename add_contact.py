@@ -11,7 +11,7 @@ def Fieldnames():
     if not os.path.exists(DATA_BASE): #  проверка существует ли файл (если да, то последующий код  функции не запускается)
         with open(DATA_BASE, 'a', newline = '') as file:
             writer = csv.writer(file,delimiter='|')
-            writer.writerow(['first_name', 'last_name', 'phone', 'group', 'comment'])
+            writer.writerow(['Имя', 'Фамилия', 'Телефон', 'Группа', 'Комментарий'])
             file.close()
 
 def Check_name(text): # не вводил проверку на количество символов, т.к. фамилии могут быть разной длины (двойные фамилии)
@@ -52,11 +52,11 @@ def add_contact():
     phone = Check_phone(input('Введите телефон контакта(+ код страны телефон (без пробелов)):\n '))
     group = input('Введите группу контакта: \n ')
     comment = input('Введите комментарий контакта:\n ')
-    new_contact = {'first_name': name,'last_name': last_name, 'phone': phone, 'group' : group, 'comment' : comment}
+    new_contact = {'Имя': name,'Фамилия': last_name, 'Телефон': phone, 'Группа' : group, 'Комментарий' : comment}
 
     
     with open (DATA_BASE, mode = 'a', newline='', encoding='utf-8') as csv_file:
-        fieldnames = ['first_name', 'last_name', 'phone', 'group', 'comment']
+        fieldnames = ['Имя', 'Фамилия', 'Телефон', 'Группа', 'Комментарий']
         
         writer = csv.DictWriter(csv_file, fieldnames=fieldnames, dialect='excel', restval='', delimiter='|')
         writer.writerow (new_contact)
