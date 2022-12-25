@@ -1,4 +1,4 @@
-from functions import write_lines, get_lines
+from functions import write_lines, get_lines, give_int
 from constants import DATA_BASE, CONTACT_TEMPLATE
 import json
 import csv
@@ -32,7 +32,19 @@ def export_to_json():
     Экспортирует данные из БД в файл формата *.json
     :return:
     """
-    with open(DATA_BASE, "r", newline='', encoding='windows-1251') as csvfile:
+    with open(DATA_BASE, "r", newline='') as csvfile:
         reader = list(csv.DictReader(csvfile, dialect='excel', delimiter=";"))
-    with open("lines.json", "w", newline='', encoding='UTF-8') as file:
+    with open("lines.json", "w", newline='') as file:
         file.write(json.dumps(reader, ensure_ascii=False, separators=(",", ":"), indent=4))
+
+
+def output_menu():
+    print("Выберите способ экспорта:")
+    print("1. *.csv файл, в строку\n2. *.csv файл, в столбик\n3. *.json файл")
+    input_choice = give_int('>> ', 1, 3)
+    if input_choice == 1:
+        export_to_rows()
+    elif input_choice == 2:
+        export_to_columns()
+    elif input_choice == 3:
+        export_to_json()

@@ -32,7 +32,7 @@ def get_list_data(filename: str) -> List[str]:
     Returns:
     List[str]
     '''
-    with open(filename, encoding='utf-8') as file:
+    with open(filename) as file:
         return file.read().split('\n')
 
 
@@ -43,7 +43,7 @@ def get_lines():
 
     :return:
     """
-    with open(DATA_BASE, "r", newline='', encoding='utf-8') as csvfile:
+    with open(DATA_BASE, "r", newline='') as csvfile:
         result = csv.DictReader(csvfile, dialect='excel', delimiter=";")
         data = []
         for row in result:
