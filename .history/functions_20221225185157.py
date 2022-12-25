@@ -43,7 +43,7 @@ def get_lines():
 
     :return:
     """
-    with open(DATA_BASE, "r", newline='', encoding='utf-8') as csvfile:
+    with open(DATA_BASE, "r", newline='', encoding='г') as csvfile:
         result = csv.DictReader(csvfile, dialect='excel', delimiter=";")
         data = []
         for row in result:

@@ -12,8 +12,8 @@ def procedure():
             add_contact()
         # elif choice == 2:
         #     delete_contact()
-        # elif choice == 3:
-        #     edit_contact()
+        elif choice == 3:
+            edit_contact()
         elif choice == 4:
             search_by()
         elif choice == 5:
@@ -21,6 +21,7 @@ def procedure():
         elif choice == 6:
             exit()
 
-
+if __name__ == '__main__':
+    procedure()
 
 

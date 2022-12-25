@@ -21,6 +21,7 @@ def procedure():
         elif choice == 6:
             exit()
 
-
+if __name__ == '__main__':
+    procedure()
 
 

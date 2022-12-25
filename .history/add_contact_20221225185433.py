@@ -9,7 +9,7 @@ def Fieldnames():
     returns -> None
     """
     if not os.path.exists(DATA_BASE): #  проверка существует ли файл (если да, то последующий код  функции не запускается)
-        with open(DATA_BASE, 'a', newline = '', encoding='utf-8') as file:
+        with open(DATA_BASE, 'a', newline = '', encoding='') as file:
             writer = csv.writer(file,delimiter='|')
             writer.writerow(['Имя', 'Фамилия', 'Телефон', 'Группа', 'Комментарий'])
             file.close()
@@ -33,7 +33,7 @@ def Check_phone(num):
     while num == '' or not num[1:].isdigit() or num[0] != '+': # не вводил проверку на количество символов, т.к. может быть иностранный номер
         num = input('Ошибка! Обязательное поле, принимаются только "+" и цифры, повторите ввод: \n ')
     
-    with open(DATA_BASE, newline='', encoding='utf-8') as csvfile:
+    with open(DATA_BASE, newline='') as csvfile:
         reader = csv.DictReader(csvfile, delimiter='|')
         for item in reader:
             while num in item['Телефон']:

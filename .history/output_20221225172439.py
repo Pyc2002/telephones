@@ -1,5 +1,5 @@
 from functions import write_lines, get_lines
-from constants import DATA_BASE, CONTACT_TEMPLATE
+from constants import DATA_BASE
 import json
 import csv
 

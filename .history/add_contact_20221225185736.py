@@ -33,7 +33,7 @@ def Check_phone(num):
     while num == '' or not num[1:].isdigit() or num[0] != '+': # не вводил проверку на количество символов, т.к. может быть иностранный номер
         num = input('Ошибка! Обязательное поле, принимаются только "+" и цифры, повторите ввод: \n ')
     
-    with open(DATA_BASE, newline='', encoding='utf-8') as csvfile:
+    with open(DATA_BASE, newline='', encoding='') as csvfile:
         reader = csv.DictReader(csvfile, delimiter='|')
         for item in reader:
             while num in item['Телефон']:
