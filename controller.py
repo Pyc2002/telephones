@@ -4,6 +4,8 @@ from add_contact import add_contact
 # from edit_contact import edit_contact
 from search import search_by
 from show_db import show
+import output
+
 
 def procedure():
     while True:
@@ -19,8 +21,6 @@ def procedure():
         elif choice == 5:
             show()
         elif choice == 6:
+            output.output_menu()
+        elif choice == 7:
             exit()
-
-
-
-

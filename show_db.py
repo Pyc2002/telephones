@@ -1,5 +1,4 @@
 from functions import get_lines
-from constants import DATA_BASE
 
 
 def show():
@@ -10,4 +9,4 @@ def show():
     """
     reader = get_lines()
     for row in reader:
-        print(*row.values())
+        print(*row)
