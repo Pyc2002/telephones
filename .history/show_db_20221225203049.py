@@ -1,5 +1,5 @@
 from functions import get_lines
-from constants import DATA_BASE
+
 
 
 def show():

@@ -2,7 +2,7 @@ from functions import get_lines
 from constants import DATA_BASE
 
 
-def show():
+def show(DATA_BASE):
     """
     Показывает базу данных.
 
