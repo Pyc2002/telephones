@@ -34,7 +34,7 @@ def export_to_json():
     """
     with open(DATA_BASE, "r", newline='') as csvfile:
         reader = list(csv.DictReader(csvfile, dialect='excel', delimiter=";"))
-    with open("lines.json", "w", newline='') as file:
+    with open("lines.json", "w", newline='', encoding='windows1251') as file:
         file.write(json.dumps(reader, ensure_ascii=False, separators=(",", ":"), indent=4))
 
 
