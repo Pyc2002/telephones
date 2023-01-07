@@ -16,6 +16,7 @@ def procedure():
             delete_contact()
         # elif choice == 3:
         #     edit_contact()
+        # log.add_logger(f"{ABILITIES[2]};{edit}") перенести в функцию
         elif choice == 4:
             search_by()
         elif choice == 5:

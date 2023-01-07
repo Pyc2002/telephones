@@ -17,3 +17,5 @@ CONTACT_TEMPLATE = {
     "Группа": "",
     "Комментарий": ""
 }
+
+LOG_NAME = ".\logger.log"
