@@ -57,12 +57,3 @@ Enter key number to modify field
         csv_file.close()
 
     return print("Edit complete"), log.add_logger(f"{ABILITIES[1]}; До редактирования:{choice}"), log.add_logger(f"{ABILITIES[2]}; Новая редакция: {edit_contact}")
-
-# edit_contact()
-
-    # with open(DATA_BASE, mode='a', newline='') as csv_file:
-    #     field_names = ['Имя', 'Фамилия', 'Телефон', 'Группа', 'Комментарий']
-
-    #     writer = csv.DictWriter(csv_file, fieldnames=field_names, dialect='excel', restval='', delimiter=';')
-    #     writer.writerow(new_contact)
-    #     csv_file.close()
