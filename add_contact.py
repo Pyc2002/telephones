@@ -2,6 +2,8 @@ from constants import DATA_BASE
 import csv
 import os.path
 from functions import write_lines
+from constants import ABILITIES
+import log
 
 def fieldnames():
     """Create file.csv if it not exists, to avoid duplicate headers
@@ -60,6 +62,8 @@ def add_contact():
     group = input('Введите группу контакта: \n ')
     comment = input('Введите комментарий контакта:\n ')
     new_contact = {'Имя': name, 'Фамилия': last_name, 'Телефон': phone, 'Группа': group, 'Комментарий': comment}
+
+    log.add_logger(f"{ABILITIES[0]};{new_contact}")
 
     with open(DATA_BASE, mode='a', newline='') as csv_file:
         field_names = ['Имя', 'Фамилия', 'Телефон', 'Группа', 'Комментарий']
